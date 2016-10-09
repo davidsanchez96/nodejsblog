@@ -1,0 +1,44 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    // The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags
+    title NodeBlog
+    // Bootstrap core CSS
+    link(href='/stylesheets/bootstrap.css', rel='stylesheet')
+    // Custom styles for this template
+    link(href='/stylesheets/style.css', rel='stylesheet')
+  body
+    .container
+      img.center.img-responsive(src='/images/logonode.png')
+      nav.navbar.navbar-inverse     
+        .navbar-header.clearfix
+          button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#navbar', aria-expanded='false', aria-controls='navbar')
+            span.sr-only Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+        #navbar.collapse.navbar-collapse
+          ul.nav.navbar-nav
+            li
+              a(href='/') Home
+            li
+              a(href='/posts/add') Add Post
+            li
+              a(href='/categories/add') Add Category
+        // /.nav-collapse
+      // /.container
+      //  Bootstrap core JavaScript
+      if messages.success && messages.success.length > 0
+        .alert.alert-success #{messages.success}
+      block content
+      footer
+        center
+          p NodeBlog &copy; 2016
+      
+      
+    // Placed at the end of the document so the pages load faster
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js')
+    script(src='/javascripts/bootstrap.js')

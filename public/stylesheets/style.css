@@ -1,0 +1,26 @@
+body {
+  padding: 50px;
+  font-family: arial;
+}
+
+img.center {
+    display: block;
+    margin: 0 auto;
+}
+
+.container{
+    border: 1px solid #ccc;
+    border-top: #83cd39 3px solid;
+}
+
+
+/* Customize container */
+@media (min-width: 768px) {
+  .container {
+    max-width: 730px;
+  }
+}
+
+
+    
+    
