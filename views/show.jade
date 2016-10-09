@@ -17,13 +17,13 @@ block content
     .well There are no posts to display
  
   if ( typeof post.comments !== 'undefined' && post.comments )
-  h2 Comments
-    hr
-    each comment, i in post.comments
-      h4 #{comment.name}
-        small  #{moment(comment.date).format("MM-DD-YYYY")}
-      p= comment.body
+    h2 Comments
       hr
+      each comment, i in post.comments
+        h4 #{comment.name}
+          small  #{moment(comment.date).format("MM-DD-YYYY")}
+        p= comment.body
+        hr
     
  
   .well
